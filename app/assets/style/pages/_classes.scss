@@ -1,0 +1,34 @@
+.specialClass {
+  height: 218px;
+  background-image: url('../images/photo-1540206276207-3af25c08abc4.jpeg');
+  @include media-breakpoint-up(md) {
+    height: 100%;
+  }
+}
+
+.classesCard {
+  height: 196px;
+}
+
+.classDetailModal {
+  .modal-dialog {
+    @include media-breakpoint-up(md) {
+      max-width: 690px;
+    }
+    @include media-breakpoint-up(lg) {
+      max-width: 920px;
+    }
+  }
+  img {
+    width: 50%;
+    aspect-ratio: 1/1;
+    @include media-breakpoint-up(md) {
+      width: 264px;
+      height: 418px;
+      aspect-ratio: auto;
+    }
+    @include media-breakpoint-up(lg) {
+      width: 418px;
+    }
+  }
+}

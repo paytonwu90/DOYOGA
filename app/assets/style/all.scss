@@ -1,0 +1,18 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "./helpers/variables";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+@import './config/base';
+
+@import './helpers/utilities';
+
+@import './components/scrollbar';
+@import './components/map';
+@import './components/card';
+
+@import './layout/layout';
+
+@import './pages/index';
+@import './pages/surroundings';
+@import './pages/schedule';
+@import './pages/classes';

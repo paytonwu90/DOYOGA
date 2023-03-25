@@ -1,0 +1,18 @@
+.classesSwiper {
+  overflow: visible;
+  @include media-breakpoint-up(md) {
+    overflow: hidden;
+  }
+  @include media-breakpoint-up(lg) {
+    overflow: visible;
+  }
+  img {
+    height: 196px;
+    @include media-breakpoint-up(md) {
+      height: 161px;
+    }
+    @include media-breakpoint-up(lg) {
+      height: 196px;
+    }
+  }
+}
