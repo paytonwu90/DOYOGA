@@ -1,10 +1,53 @@
----
-title: DOYOGA
-layout: ./app/layout.ejs
-engine: ejs
-current: schedule
----
+<!DOCTYPE html>
+<html lang="en">
 
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>===============DOYOGA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./assets/style/bootstrap.css">
+    <link rel="stylesheet" href="./assets/style/all.css">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light position-sticky top-0 py-5">
+      <div class="container position-relative">
+        <a class="navbar-brand" href="index.html"><img src="./assets/images/DOYOGA-logo.png" alt="DOYOGA-logo" class="logo"></a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse position-lg-absolute top-0 start-50 translate-lg-middle-x" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-dark fw-light px-lg-4 hover-underline hover-underline-transparent hover-underline-lg-dark" href="classes.html">課程介紹</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark fw-light px-lg-4 hover-underline hover-underline-transparent hover-underline-lg-dark" href="surroundings.html">瑜珈空間</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark fw-light px-lg-4 hover-underline hover-underline-transparent hover-underline-lg-dark" href="schedule.html">當月課表</a>
+            </li>
+            <li class="nav-item d-lg-none">
+              <a class="nav-link text-dark fw-light" href="reservation_step1.html">立即預約</a>
+            </li>
+            <li class="nav-item d-lg-none">
+              <a class="nav-link text-dark fw-light" href="contact.html">聯絡我們</a>
+            </li>
+          </ul>
+        </div>
+        <div class="d-none d-lg-block">
+          <a href="reservation_step1.html" class="btn btn-outline-secondary rounded-3 hover-text-white me-4">立即預約</a>
+          <a href="contact.html" class="btn btn-outline-secondary rounded-3 hover-text-white">聯絡我們</a>
+        </div>
+      </div>
+    </nav>
+
+    
 <div class="pt-12 pb-8">
   <div class="container">
     <h2 class="fw-medium fs-3 text-secondary text-center mb-6">本月課表</h2>
@@ -152,3 +195,54 @@ current: schedule
     </div>
   </div>
 </div>
+
+
+    <footer class="footer bg-secondary">
+      <div class="border-bottom border-white">
+        <div class="container">
+          <div class="row align-items-center py-6 py-md-8">
+            <div class="col-lg-8">
+              <h3 class="fs-4 fw-medium text-white mb-2 mb-lg-0">現在訂閱，獲得課程優惠碼！</h3>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="input-group">
+                <input type="text" class="form-control fs-5 placeholder-secondary" placeholder="輸入您的電子信箱" aria-label="輸入您的電子信箱" aria-describedby="button-subscribe">
+                <button class="btn btn-primary text-white fs-5" type="button" id="button-subscribe">訂閱</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="pt-6 pb-8 py-md-8">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <a href="index.html"><img class="logo" src="./assets/images/DOYOGA.png" alt="DOYOGA-logo"></a>
+            <div class="d-flex align-items-center fs-4">
+              <a href="#" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="text-white"><i class="fab fa-line"></i></a>
+            </div>
+          </div>
+          <div class="mb-2"><a href="classes.html" class="fw-light text-white">課程介紹</a></div>
+          <div class="mb-2"><a href="surroundings.html" class="fw-light text-white">瑜珈空間</a></div>
+          <div class="position-relative">
+            <div class="mb-2 mb-md-0"><a href="schedule.html" class="fw-light text-white">當月課表</a></div>
+            <p class="text-white position-md-absolute top-0 start-50 translate-md-middle-x">© 2021. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <ul class="fixedSocialMedia d-none d-lg-block position-fixed top-50 translate-middle list-unstyled lh-1">
+      <li><a href="#" class="fixedSocialMedia-link d-inline-block text-secondary mb-2"><i class="fab fa-facebook"></i></a></li>
+      <li><a href="#" class="fixedSocialMedia-link d-inline-block text-secondary mb-2"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="#" class="fixedSocialMedia-link d-inline-block text-secondary"><i class="fab fa-line"></i></a></li>
+    </ul>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+  </body>
+
+</html>
