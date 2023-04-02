@@ -184,8 +184,32 @@ var reservationInit = function () {
     var card = document.querySelector("[data-qs=".concat(selectedClass, "]"));
     card.click();
   }
-}();
+}(); //aos pre-init
 
+
+(function () {
+  if (Detector.isDesktop() || Detector.isPad()) {
+    //md-up
+    var elements = document.querySelectorAll('[data-aos-md-up-delay]');
+    elements.forEach(function (el) {
+      if (el.dataset['aosMdUpDelay']) el.dataset['aosDelay'] = el.dataset['aosMdUpDelay'];
+    });
+  }
+
+  if (Detector.isDesktop()) {
+    //lg-up
+    var _elements = document.querySelectorAll('[data-aos-lg-up-delay]');
+
+    _elements.forEach(function (el) {
+      if (el.dataset['aosLgUpDelay']) el.dataset['aosDelay'] = el.dataset['aosLgUpDelay'];
+    });
+  }
+})();
+
+AOS.init({
+  duration: 1000,
+  once: true
+});
 var swiper = new Swiper('.recommandationSwiper', {
   // Optional parameters
   slidesPerView: 1,

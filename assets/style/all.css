@@ -17519,60 +17519,6 @@ img {
   }
 }
 
-/* hover */
-.hover-text-white:hover {
-  color: #fff !important;
-}
-
-.hover-underline {
-  position: relative;
-}
-
-.hover-underline::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #000;
-  -webkit-transform: scaleX(0);
-      -ms-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transform-origin: center;
-      -ms-transform-origin: center;
-          transform-origin: center;
-  -webkit-transition: -webkit-transform .25s ease;
-  transition: -webkit-transform .25s ease;
-  -o-transition: transform .25s ease;
-  transition: transform .25s ease;
-  transition: transform .25s ease, -webkit-transform .25s ease;
-}
-
-.hover-underline:hover::before {
-  -webkit-transform: scaleX(100%);
-      -ms-transform: scaleX(100%);
-          transform: scaleX(100%);
-}
-
-.hover-underline-transparent::before {
-  background-color: transparent !important;
-}
-
-.hover-underline-secondary::before {
-  background-color: #907A7B !important;
-}
-
-.hover-underline-dark::before {
-  background-color: #707070 !important;
-}
-
-@media (min-width: 992px) {
-  .hover-underline-lg-dark::before {
-    background-color: #707070 !important;
-  }
-}
-
 .w-48px {
   width: 48px;
 }
@@ -17782,6 +17728,59 @@ img {
   border-color: #fff !important;
 }
 
+.hover-text-white:hover {
+  color: #fff !important;
+}
+
+.hover-underline {
+  position: relative;
+}
+
+.hover-underline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: -webkit-transform .25s ease;
+  transition: -webkit-transform .25s ease;
+  -o-transition: transform .25s ease;
+  transition: transform .25s ease;
+  transition: transform .25s ease, -webkit-transform .25s ease;
+}
+
+.hover-underline:hover::before {
+  -webkit-transform: scaleX(100%);
+      -ms-transform: scaleX(100%);
+          transform: scaleX(100%);
+}
+
+.hover-underline-transparent::before {
+  background-color: transparent !important;
+}
+
+.hover-underline-secondary::before {
+  background-color: #907A7B !important;
+}
+
+.hover-underline-dark::before {
+  background-color: #707070 !important;
+}
+
+@media (min-width: 992px) {
+  .hover-underline-lg-dark::before {
+    background-color: #707070 !important;
+  }
+}
+
 .logo {
   width: 96px;
 }
@@ -17805,6 +17804,7 @@ img {
 
 .fixedSocialMedia-link {
   font-size: 48px;
+  color: #836d6e;
 }
 
 .banner {
