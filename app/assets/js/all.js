@@ -177,6 +177,28 @@ const reservationInit = (function () {
 
 
 
+//aos pre-init
+(function() {
+  if (Detector.isDesktop() || Detector.isPad()) {
+    //md-up
+    let elements = document.querySelectorAll('[data-aos-md-up-delay]');
+    elements.forEach(el => {
+      if (el.dataset['aosMdUpDelay']) el.dataset['aosDelay'] = el.dataset['aosMdUpDelay'];
+    });
+  }
+  if (Detector.isDesktop()) {
+    //lg-up
+    let elements = document.querySelectorAll('[data-aos-lg-up-delay]');
+    elements.forEach(el => {
+      if (el.dataset['aosLgUpDelay']) el.dataset['aosDelay'] = el.dataset['aosLgUpDelay'];
+    });
+  }
+})();
+
+AOS.init({
+  duration: 1000,
+  once: true
+});
 
 
 

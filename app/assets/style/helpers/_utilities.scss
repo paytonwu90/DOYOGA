@@ -45,53 +45,6 @@
 
 
 
-/* hover */
-
-.hover-text-white:hover {
-  color: #fff !important;
-}
-
-.hover-underline {
-  position: relative;
-  &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #000;
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: transform .25s ease;
-  }
-  &:hover::before {
-    transform: scaleX(100%);
-  }
-}
-.hover-underline-transparent {
-  &::before {
-    background-color: transparent !important;
-  }
-}
-.hover-underline-secondary {
-  &::before {
-    background-color: $secondary !important;
-  }
-}
-.hover-underline-dark {
-  &::before {
-    background-color: $dark !important;
-  }
-}
-.hover-underline-lg-dark {
-  &::before {
-    @include media-breakpoint-up(lg) {
-      background-color: $dark !important;
-    }
-  }
-}
-
 .w-48px {
   width: 48px;
 }
