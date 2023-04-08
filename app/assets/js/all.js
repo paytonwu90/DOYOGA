@@ -1,4 +1,4 @@
-window.addEventListener('scroll', scrollHandler); //aos 會加上 throttle
+window.addEventListener('scroll', scrollHandler, {passive: true}); //aos 會加上 throttle
 init();
 
 
