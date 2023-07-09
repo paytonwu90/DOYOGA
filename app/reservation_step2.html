@@ -21,7 +21,7 @@ current: reservation_step2
     <div class="row justify-content-center">
       <div class="col-md-6 col-lg-4">
         <p class="text-secondary text-center mb-6 mb-lg-8">您選擇的是<span class="fs-5 text-primary ms-4">首次體驗課程-基礎</span></p>
-        <form action="#" method="post" class="text-dark">
+        <form action="reservation_step3.html" method="post" id="reservationForm" class="text-dark">
           <div class="mb-8">
             <p class="mb-4">1. 是否接觸過瑜珈?</p>
             <div class="d-flex">
@@ -37,7 +37,7 @@ current: reservation_step2
           </div>
           <div class="mb-4">
             <p class="mb-4">2. 想改善的生活問題?</p>
-            <div class="d-flex flex-wrap">
+            <div class="d-flex flex-wrap" id="reservation_problem">
               <div class="form-check me-3 me-md-4 mb-4">
                 <input class="form-check-input" type="checkbox" value="" id="problem1">
                 <label class="form-check-label" for="problem1">肌耐力不足</label>
@@ -87,38 +87,43 @@ current: reservation_step2
           </div>
           <div class="mb-8">
             <p class="mb-1">4. 上課預約報到日</p>
-            <p class="small mb-2">若還沒有確定的日期，可以等待專員與您聯絡時在做詳細的諮詢哦！</p>
-            <input type="date" name="checkinDate" id="" class="form-control w-auto border-primary text-secondary">
+            <p class="small mb-2">若還沒有確定的日期，可以等待專員與您聯絡時再做詳細的諮詢哦！</p>
+            <input type="date" name="checkinDate" id="reservation_checkinDate" class="form-control w-auto border-primary text-secondary">
           </div>
           <div class="mb-8">
             <p class="mb-4">5. 填寫基本資料，完成預約後會寄送通知至電子信箱</p>
             <div class="d-flex text-secondary mb-4">
               <div class="me-2">
-                <label for="reservation_name" class="form-label">姓名</label>
-                <input type="text" class="form-control border-primary placeholder-primary" id="reservation_name" placeholder="請輸入您的姓名">
+                <label for="reservation_name" class="form-label"><span class="text-danger">*</span>姓名</label>
+                <input type="text" class="form-control border-primary placeholder-primary" id="reservation_name" name="name" placeholder="請輸入您的姓名">
+                <p class="message text-danger"></p>
               </div>
               <div>
                 <label for="reservation_age" class="form-label">年齡</label>
-                <input type="text" class="form-control border-primary placeholder-primary" id="reservation_age" placeholder="請輸入您的年齡">
+                <!-- type=number 會使 input.value 在輸入非數字時取不到值，影響 validate.js 驗證 -->
+                <input type="text" class="form-control border-primary placeholder-primary" id="reservation_age" name="age" placeholder="請輸入您的年齡">
+                <p class="message text-danger"></p>
               </div>
             </div>
             <div class="text-secondary mb-4">
               <label for="reservation_gender" class="form-label">性別</label>
               <select class="form-select w-auto text-secondary border-primary" aria-label="" id="reservation_gender">
-                <option value="male">男</option>
-                <option value="female" selected>女</option>
+                <option value="男">男</option>
+                <option value="女" selected>女</option>
               </select>
             </div>
             <div class="text-secondary mb-4">
-              <label for="reservation_email" class="form-label">電子信箱</label>
-              <input type="email" class="form-control border-primary placeholder-primary" id="reservation_email" placeholder="email@example.com">
+              <label for="reservation_email" class="form-label"><span class="text-danger">*</span>電子信箱</label>
+              <input type="email" class="form-control border-primary placeholder-primary" id="reservation_email" name="email" placeholder="email@example.com">
+              <p class="message text-danger"></p>
             </div>
             <div class="text-secondary">
               <label for="reservation_phone" class="form-label">手機號碼</label>
-              <input type="tel" class="form-control border-primary placeholder-primary" id="reservation_phone" placeholder="0912-345-678">
+              <input type="tel" class="form-control border-primary placeholder-primary" id="reservation_phone" name="phone" placeholder="0912345678">
+              <p class="message text-danger"></p>
             </div>
           </div>
-          <a href="reservation_step3.html" class="btn btn-primary text-white w-100">送出</a>
+          <button type="submit" class="btn btn-primary text-white w-100">送出</button>
         </form>
       </div>
     </div>
